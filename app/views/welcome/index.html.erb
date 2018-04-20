@@ -7,4 +7,21 @@
     <br>
     <p>Your one stop shop for everything you'll ever need in Hyrule!</p>
   </div>
+  <div class="new_product">
+    <div class="row">
+      <div class="col-md-4">
+        <h1>New Products:</h1>
+        <% @recent_products.each do |product| %>
+        <h3><%= product.name %></h3>
+        <h5>Launch Date: <%= product.created_at.strftime("%Y-%m-%d") %></h5>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+      <% @most_reviewed.each do |product| %>
+      <h3><%= product.name %></h3>
+      <h5>Number of Reviews: <%= product.reviews.length %></h5>
+      <% end %>
+      </div>
+    </div>
+  </div>
 </div>

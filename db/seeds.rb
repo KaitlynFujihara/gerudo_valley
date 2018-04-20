@@ -5,7 +5,7 @@ Review.destroy_all
   Product.create!(name: Faker::Zelda.item, cost: Faker::Number.between(1, 100), country: Faker::Zelda.location)
   @product_id = Product.last.id
   5.times do |t|
-    Review.create!(author: Faker::Zelda.character, content: Faker::Hipster.paragraph(8), rating: Faker::Number.between(1, 5), product_id: @product_id)
+    Review.create!(author: Faker::Zelda.character, content: Faker::Hipster.paragraph(3), rating: Faker::Number.between(1, 5), product_id: @product_id)
   end
 end
 

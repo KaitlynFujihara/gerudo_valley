@@ -1,14 +1,14 @@
 class ReviewsController < ApplicationController
   def new
-    @review = Review.find(params[:product_id])
-    @product = @product.reviews.new
+    @product = Product.find(params[:product_id])
+    @review = Review.new
   end
 
   def create
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new(reviews_params)
     if @review.save
-      redirect_to product_path(@review.product)
+      redirect_to product_path(@review.product_id)
     else
       render :new
     end
@@ -22,16 +22,16 @@ class ReviewsController < ApplicationController
 
   def update
     @product = Product.find(params[:product_id])
-    @product = Product.find(params[:id])
+    @review = Review.find(params[:id])
     if @review.update(reviews_params)
-      redirect_to product_path(@review.product)
+      redirect_to product_path(@review.product_id)
     else
       render :edit
     end
   end
 
   def destroy
-    @product = Product.find(params[:id])
+    @review = Review.find(params[:id])
     @review.destroy
     redirect_to product_path(@review.product)
   end

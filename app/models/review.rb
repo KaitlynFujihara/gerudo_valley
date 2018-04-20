@@ -8,6 +8,14 @@ class Review < ActiveRecord::Base
       return self.content
     else
       return "invalid review"
-    end  
+    end
+  end
+
+  def rating_check
+    if self.rating >0 && self.rating <= 5
+      return self.rating
+    else
+      return "invalid  rating"
+    end
   end
 end

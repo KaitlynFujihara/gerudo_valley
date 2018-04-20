@@ -12,10 +12,9 @@
 
    <ul>
      <% @product.reviews.each do |review| %>
-      <% review.char_count %>
        <p>
-         By: <%= review.author %> | Rating: <%= review.rating %> <br>
-         <%= review.content %> <br>
+         By: <%= review.author %> | Rating: <%= review.rating_check %> <br>
+         <%= review.char_count %>
        </p>
      <% end %>
    </ul>

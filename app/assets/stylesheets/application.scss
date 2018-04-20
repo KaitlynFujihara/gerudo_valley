@@ -1,1 +1,26 @@
 @import "bootstrap";
+body {
+  background: black; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#title {
+  text-align:center;
+  display: block;
+  margin: 10% auto;
+  background-image: url('snow.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5%;
+  width: 800px;
+  height:600px;
+  font-family: 'Black Han Sans', sans-serif;
+
+}
+
+#button {
+  width: 200px;
+  height: 50px;
+  display:block;
+  margin: 20% auto;
+  font-size: 25px;
+}

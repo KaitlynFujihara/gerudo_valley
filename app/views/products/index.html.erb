@@ -1,15 +1,20 @@
 <div class="container" id="products">
-  <h2>Products</h2>
-
+  <div class="jumbotron" id="productjumbo">
+    <h1>Products</h1>
+  </div>
 <div class="row">
   <div class="col-md-6">
-    <% @products[0, 25].each do |product| %>
-    <h3>Product Name: <%= product.name%> - $<%=product.cost%> (Made in <%=product.country%>)</h3>
+    <% @products[0, 24].each do |product| %>
+    <h3><%= link_to product.name, product_path(product)%> - $<%=product.cost%></h3>
+    <h5>(Made in <%=product.country%>)</h5>
+    <hr>
     <% end %>
   </div>
   <div class="col-md-6">
-    <% @products[26, 50].each do |product| %>
-    <h3>Product Name: <%= product.name%> - $<%=product.cost%> (Made in <%=product.country%>)</h3>
+    <% @products[25, 50].each do |product| %>
+    <h3><%= link_to product.name, product_path(product)%> - $<%=product.cost%></h3>
+    <h5>(Made in <%=product.country%>)</h5>
+    <hr>
     <% end %>
   </div>
 </div>

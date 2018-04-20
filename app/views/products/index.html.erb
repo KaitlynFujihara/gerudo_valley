@@ -1,22 +1,12 @@
 <div class="container" id="products">
   <div class="jumbotron" id="productjumbo">
     <h1>Products</h1>
+    <p><%= link_to "Add a New Product", new_product_path(@product) %></p>
   </div>
-<div class="row">
-  <div class="col-md-6">
-    <% @products[0, 24].each do |product| %>
-    <h3><%= link_to product.name, product_path(product)%> - $<%=product.cost%></h3>
-    <h5>(Made in <%=product.country%>)</h5>
-    <hr>
-    <% end %>
-  </div>
-  <div class="col-md-6">
-    <% @products[25, 50].each do |product| %>
-    <h3><%= link_to product.name, product_path(product)%> - $<%=product.cost%></h3>
-    <h5>(Made in <%=product.country%>)</h5>
-    <hr>
-    <% end %>
-  </div>
+  <% @products.each do |product| %>
+  <h3><%= link_to product.name, product_path(product)%> - $<%=product.cost%></h3>
+  <h5>(Made in <%=product.country%>)</h5>
+  <hr>
+  <% end %>
 </div>
-  <p><%= link_to "Add a New Product", new_product_path(@product) %></p>
 </div>

@@ -6,4 +6,26 @@
 <%= link_to "Delete Product", product_path(@product),
                           :data => {:confirm => "Are you sure?",
                                          :method => "delete"} %></p>
+
+   <% if @product.reviews.any? %>
+   <h4>Here are the reviews for this product:</h4>
+
+   <ul>
+     <% @product.reviews.each do |review| %>
+      <% review.char_count %>
+       <p>
+         By: <%= review.author %> | Rating: <%= review.rating %> <br>
+         <%= review.content %> <br>
+       </p>
+     <% end %>
+   </ul>
+ <% else %>
+   <p>There are no reviews yet!</p>
+ <% end %>
+ <p><%= link_to "Add a review", new_product_review_path(@product) %></p>
+ <p><%= link_to "Delete product", product_path(@product),
+                         :data => {:confirm => "Are you sure?",
+                                        :method => "delete"} %></p>
+
+ <p><%= link_to "Return to products", products_path %></p>
 </div>

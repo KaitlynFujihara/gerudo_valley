@@ -1,8 +1,12 @@
 @import "bootstrap";
 body {
   background: black; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
+
+a {
+  color: white;
+}
+
 #title {
   text-align:center;
   display: block;
@@ -33,10 +37,6 @@ body {
   color: white;
 }
 
-a {
-  color: white;
-}
-
 #products {
   color: white;
   font-family: 'Black Han Sans', sans-serif;
@@ -45,5 +45,16 @@ a {
 
 #productjumbo {
   background: white;
+  color: black;
+}
+
+#show {
+  color: black;
+  background-color: white;
+  margin-top: 20%;
+  text-align: center;
+}
+
+#show a {
   color: black;
 }

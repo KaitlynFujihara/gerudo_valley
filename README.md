@@ -5,7 +5,7 @@ An online store for items that can be found in Zelda.
 ### April 21, 2018
 
 ## Description
-On the home page of this online store, you can view newest products, products with the most ratings, and products made in Hyrule Castle. If you want to see all of the products, you can navigate to the button that says "Products". This will show you a list of all products and their information. If you want to view/edit/delete any of this information, you can click on the specific item and it will give you the option to do updates and deletion. On this page, you can also see reviews and add reviews.
+On the home page of this online store, you can view newest products, products with the most ratings, and products made in Hyrule Castle. If you want to see all of the products, you can navigate to the button that says "Products". This will show you a list of all products and their information. If you want to view/edit/delete any of this information, you can click on the specific item and it will give you the option to do updates and deletion. On this page, you can also see reviews and add reviews. If a review is less than 50 or more than 250 characters, it will come back as an "invalid review". Similarly, if the rating is not between 1-5 it is an "invalid rating". Please make sure all fields are filled in when creating a product or review.
 
 ## Specifications/User Expectations
 * Allows you to see on a map where your search is (using latitude and longitude)

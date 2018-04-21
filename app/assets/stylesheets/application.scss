@@ -17,6 +17,7 @@ a {
   border-radius: 5%;
   width: 850px;
   height:600px;
+  float:right;
   font-family: 'Black Han Sans', sans-serif;
   color: white;
 }
@@ -57,14 +58,20 @@ a {
   background-color: white;
   margin-top: 5%;
   text-align: center;
+  height: auto;
 }
 
 #show a {
   color: black;
 }
 
+#show p {
+  color: black;
+}
+
 .new_product {
   color: white;
+  float:left;
   text-align: center;
   font-family: 'Black Han Sans', sans-serif;
 }

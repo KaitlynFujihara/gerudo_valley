@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
   validates :name, :presence => true
   validates :cost, :presence => true
   validates :country, :presence => true
+  validates :inventory, :presence => true
 
   scope :recent_products, -> { order(created_at: :desc).limit(3)}
 
@@ -14,4 +15,6 @@ class Product < ActiveRecord::Base
     .order("reviews_count DESC")
     .limit(3)
     )}
+
+    scope :made_in_hyrule, -> { where(country: "Hyrule Castle")}
 end

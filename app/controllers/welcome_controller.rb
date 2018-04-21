@@ -1,7 +1,8 @@
 class WelcomeController < ApplicationController
   def index
-    @most_reviewed = Product.order("product.reviews.length DESC").limit(3)
-    @recent_products= Product.order("created_at DESC").limit(3)
+    @products = Product.all
+    @reviews= Review.all
+
     render :index
   end
 end

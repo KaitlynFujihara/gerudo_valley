@@ -2,6 +2,8 @@ class Review < ActiveRecord::Base
   validates :author, :presence => true
   validates :content, :presence => true
   validates :rating, :presence => true
+  validates :rating, :inclusion => 1..5
+  validates :content, length: { in: 50..250 }
 
   def char_count
     if self.content.size  >= 50 && self.content.size <= 250

@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new(reviews_params)
     if @review.save
+      flash[:notice] = "#{@review.author}, thank you for your review!"
       redirect_to product_path(@review.product_id)
     else
       render :new

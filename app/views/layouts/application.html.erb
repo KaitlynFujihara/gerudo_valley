@@ -8,6 +8,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <div class="container">
+      <h2 id="flash-notice"><%= flash[:notice] %></h2>
+    </div>
   </head>
 
   <body>
